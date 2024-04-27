@@ -1,7 +1,7 @@
 export const UpperFoot = () => {
     return (
         <div className="flex justify-center">
-            <footer className="hidden md:flex md:justify-between md:footer md:p-10 md:text-white md:w-[1080px]">
+            <footer className="hidden md:flex md:justify-between md:footer md:p-10 md:text-white xl:w-[1280px] px-4">
                 <nav>
                     <h6 className="text-white text-xl font-semibold">Services</h6> 
                     <a className="link link-hover text-md font-medium">Branding</a>

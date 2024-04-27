@@ -9,7 +9,7 @@ export const Hero = () => {
         <div className="hero h-fit" style={{backgroundImage: `url("${bg}")`}}>
             <div className="hero-overlay bg-opacity-80"></div>
 
-            <div className='flex flex-col-reverse justify-center items-center lg:items-start lg:w-[1080px] lg:flex-row lg:justify-between gap-10 my-12'>
+            <div className='flex flex-col-reverse justify-center items-center lg:items-start xl:w-[1280px] lg:flex-row lg:justify-between gap-10 my-12 px-4'>
                 <div className="card shrink-0 shadow-2xl bg-base-100 w-[300px] md:w-[600px]">
                     <form className="card-body p-4 flex flex-col gap-6">
 
@@ -95,7 +95,7 @@ export const Hero = () => {
                 </div>
 
                 <div className='text-white'>
-                    <h1 className='text-2xl font-bold md:text-3xl text-center lg:text-start'>Buy and Sell the latest used cars for the fairest prices.</h1>
+                    <h1 className='text-2xl font-bold md:text-3xl text-center lg:text-start px-4 md:px-0'>Buy and Sell the latest used cars for the fairest prices.</h1>
                     <p className='text-xl font-normal mt-10 hidden lg:block'>Passenger cars, vans, light trucks and even margin cars or damaged vehicles, you’re sure to find what you’re looking for.</p>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import logo from "../assets/logo.png"
 export const DownFoot = () => {
     return (
         <div className="flex justify-center">
-            <footer className="footer items-center p-4 text-white w-[1080px] flex justify-between">
+            <footer className="footer items-center p-4 text-white w-[1280px] flex justify-between">
                 <aside className="items-center grid-flow-col">
                     <a href="">
                         <img src={logo} alt="" className="h-16 bg-white rounded-2xl shadow-2xl"/>

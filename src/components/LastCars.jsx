@@ -15,11 +15,12 @@ export const LastCars = () => {
     const scrollRight = () => scrollDiv.current.scrollLeft = scrollDiv.current.scrollLeft + 256 + 16
 
     return (
-        <div className="bg-gray-200 xl:flex xl:justify-center">
+        <div className="bg-gray-100 xl:flex xl:justify-center border-b border-t">
             <div className='flex flex-col gap-8 px-4 py-8 xl:w-[1280px] relative'>
                 <h1 className="text-center text-primary font-bold text-3xl">Last 10 Cars</h1>
 
                 <div className="flex overflow-x-hidden" ref={scrollDiv}>
+
                     <div className="flex gap-4 pb-8">
                         {   
                             cars.map((car, id) => {

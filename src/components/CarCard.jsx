@@ -23,7 +23,7 @@ export const CarCard = ({ car }) => {
                 </div>
 
                 <button type="button" className="flex-1/3 btn w-full btn-primary">
-                    <a href="">Deatils</a>
+                    <a href="">Details</a>
                 </button>
 
             </div>

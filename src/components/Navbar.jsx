@@ -16,12 +16,12 @@ export const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100 flex justify-center pb-0">
+        <div className="navbar bg-base-100 flex justify-center pb-0 border-b">
             <div className="flex flex-col w-[1280px] md:px-2">
                 
                 <div className="flex w-full justify-between items-center" >
                     <div className="">
-                        <a className="">
+                        <a className="" href="/">
                             <img className="h-20" src={logo} alt="" />
                         </a>
                     </div>
@@ -55,8 +55,8 @@ export const Navbar = () => {
 
                 <div className="hidden md:flex md:w-full md:justify-start mt-2">
                     <ul className="flex">
-                        <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="" className="">Home</a></li>
-                        <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="">Find Cars</a></li>
+                        <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="/" className="">Home</a></li>
+                        <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="/findcar/advanced">Find Cars</a></li>
                         <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="">Auctions</a></li>
                         <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="">Sell</a></li>
                     </ul>
@@ -64,8 +64,8 @@ export const Navbar = () => {
                 
                 <div className={`${panel ? 'flex' : 'hidden'} md:hidden flex-col gap-80 fixed h-screen w-screen bg-white z-50 mt-20 border-t border-gray-200`}>
                     <ul className="flex flex-col text-lg font-normal">
-                        <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="">Home</a></li>
-                        <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="">Find Cars</a></li>
+                        <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="/">Home</a></li>
+                        <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="/findcar/advanced">Find Cars</a></li>
                         <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="">Auctions</a></li>
                         <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="">Sell</a></li>
                         <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200 flex justify-between items-center gap-4">

@@ -4,6 +4,7 @@ import { IoPersonAdd } from "react-icons/io5"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { IoMdClose } from "react-icons/io"
 import { IoEarthOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 
 export const Navbar = () => {
@@ -36,7 +37,7 @@ export const Navbar = () => {
                             </div>
                         </button>
                         <select className="select select-primary w-full max-w-xs rounded-full">
-                            <option disabled selected>Select language</option>
+                            <option disabled selected hidden>Select language</option>
                             <option>English</option>
                             <option>Romanian</option>
                             <option>Russian</option>
@@ -55,28 +56,54 @@ export const Navbar = () => {
 
                 <div className="hidden md:flex md:w-full md:justify-start mt-2">
                     <ul className="flex">
-                        <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="/" className="">Home</a></li>
-                        <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="/findcar/advanced">Find Cars</a></li>
-                        <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="">Auctions</a></li>
-                        <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary"><a href="">Sell</a></li>
+                        <Link to={'/'} reloadDocument>
+                            <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Home</li>
+                        </Link>
+                        
+                        <Link to={'/findcar/advanced'} reloadDocument>
+                            <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Find Cars</li>
+                        </Link>
+
+                        <Link to={'/'} reloadDocument>
+                            <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Auctions</li>
+                        </Link>
+
+                        <Link to={'/'} reloadDocument>
+                            <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Sell</li>
+                        </Link>
+                        
                     </ul>
                 </div>
                 
                 <div className={`${panel ? 'flex' : 'hidden'} md:hidden flex-col gap-80 fixed h-screen w-screen bg-white z-50 mt-20 border-t border-gray-200`}>
                     <ul className="flex flex-col text-lg font-normal">
-                        <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="/">Home</a></li>
-                        <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="/findcar/advanced">Find Cars</a></li>
-                        <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="">Auctions</a></li>
-                        <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200"><a href="">Sell</a></li>
+                            
+                        <Link to={'/'} reloadDocument>
+                            <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200">Home</li>
+                        </Link>
+
+                        <Link to={'/findcar/advanced'} reloadDocument>
+                            <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200">Find Cars</li>
+                        </Link>
+
+                        <Link to={'/'} reloadDocument>
+                            <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200">Auctions</li>
+                        </Link>
+
+                        <Link to={'/'} reloadDocument>
+                            <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200">Sell</li>
+                        </Link>
+
                         <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200 flex justify-between items-center gap-4">
                             <IoEarthOutline fontSize={'2rem'} />
                             <select className="select select-bordered w-full">
-                                <option disabled selected>Select language</option>
+                                <option disabled selected hidden>Select language</option>
                                 <option>English</option>
                                 <option>Romanian</option>
                                 <option>Russian</option>
                             </select>
                         </li>
+
                     </ul>
                     <div className="w-full flex justify-between px-3 gap-4">
                         <button className="btn btn-outline btn-primary flex-1 rounded-full">

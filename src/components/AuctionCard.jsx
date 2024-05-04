@@ -58,7 +58,7 @@ export const AuctionCard = ({ car }) => {
                 </Link>
                     
 
-                <div className="flex border-t border-gray-300 mt-4 p-4 gap-4 items-center">
+                <div className="hidden md:flex border-t border-gray-300 mt-4 p-4 gap-4 items-center">
                     <button type="button" className="btn rounded-md border-1 border-black">Dynamic auction</button>
                     <button type="button" className="btn rounded-md border-1 border-black">VAT Excluded</button>
                     <h1 className="text-md font-semibold"><span className="underline text-primary"><Link to={'.'}>Register</Link></span> or <span className="underline text-primary">Login</span> to place a bid and to see all vehicle information</h1>

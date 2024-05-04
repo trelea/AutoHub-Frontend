@@ -64,7 +64,7 @@ export const Navbar = () => {
                             <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Find Cars</li>
                         </Link>
 
-                        <Link to={'/'} reloadDocument>
+                        <Link to={'/auctions'} reloadDocument>
                             <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Auctions</li>
                         </Link>
 
@@ -86,7 +86,7 @@ export const Navbar = () => {
                             <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200">Find Cars</li>
                         </Link>
 
-                        <Link to={'/'} reloadDocument>
+                        <Link to={'/auctions'} reloadDocument>
                             <li className="py-4 px-4 border-b hover:border-l-4 hover:border-l-primary hover:pl-3 hover:bg-gray-200">Auctions</li>
                         </Link>
 

@@ -7,12 +7,6 @@ export const useFindCarsStore = create(set => ({
         { _id: 1, make: '', model: '' },
     ],
 
-    // addNewCar: (car) => {
-    //     set(state => ({
-    //         cars: [...state.cars, car]
-    //     }))
-    // },
-
     setMake: ({ carId, make }) => {
         set(state => ({
             cars: state.cars.map((car) => {
@@ -45,6 +39,5 @@ export const useFindCarsStore = create(set => ({
             cars: state.cars.filter(car => car._id !== carId)
         }))
     }
-
 
 }))

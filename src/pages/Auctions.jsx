@@ -9,18 +9,18 @@ import { Refine } from "../components/Refine"
 
 
 
-
 export const Auctions = () => {
     
     const [searchParams, setSearchParams] = useSearchParams({ page: 1, limit: 20})
     const [cars, setCars] = useState([])
 
     useEffect(() => {
-        const page = parseInt(searchParams.get('limit')) * (parseInt(searchParams.get('page')) - 1)
-        const limit = parseInt(searchParams.get('limit')) + page
-        setCars(db.data.slice(page, limit))
-
-
+        setSearchParams(searchParams)
+        setCars(db.data.slice(
+            parseInt(searchParams.get('limit')) * (parseInt(searchParams.get('page')) - 1),
+            parseInt(searchParams.get('limit')) + (searchParams.get('limit')) * (parseInt(searchParams.get('page')) - 1)
+        ))
+        window.scrollTo({ top: 0})
     }, [searchParams])
 
     return (
@@ -28,8 +28,8 @@ export const Auctions = () => {
             <div className="flex justify-center items-center bg-slate-100">
                 <div className="flex flex-col gap-4 px-4 py-8 xl:w-[1280px] w-full lg:flex-row lg:justify-between">
                     <Refine />
-                    <div>
-                       <AuctionsContent cars={cars}/>
+                    <div className="flex flex-col gap-8">
+                        <AuctionsContent cars={cars}/>
                         <Pagination searchParams={searchParams} setSearchParams={setSearchParams} /> 
                     </div>
                     

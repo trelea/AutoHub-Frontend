@@ -67,7 +67,7 @@ export const AuctionCard = ({ car }) => {
             </div>
             
             <div className="hidden md:flex md:justify-center md:items-center p-4 hover:bg-primary hover:text-white rounded-r">
-                <Link to={`/car/info?auctionId=${car.id}`} preventScrollReset reloadDocument>
+                <Link to={`/car/info?auctionId=${car.id}`} preventScrollReset reloadDocument className="h-full">
                     <MdNavigateNext className="h-full text-xl"/>
                 </Link>
             </div>

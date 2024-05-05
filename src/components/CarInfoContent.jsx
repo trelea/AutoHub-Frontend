@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { IoIosArrowBack } from "react-icons/io"
 import { ThumbnailsCarousel } from "./ThumbnailsCarousel"
 import { CarSpecifications } from "./CarSpecifications"
@@ -9,13 +9,18 @@ import { CarDamage } from "./CarDamage"
 
 
 export const CarInfoContent = ({ car }) => {
+    const navigate = useNavigate()
     return (
         <>
             <div className="flex justify-center items-center bg-slate-100">
                 <div className="flex flex-col gap-8 px-4 py-8 xl:w-[1280px] w-full">
                     <div className="flex justify-start w-full">
-                        <Link to={'..'} className="underline text-primary text-md text-start flex items-center">
-                            <IoIosArrowBack /> Back to results</Link>
+                        <button 
+                            className="underline text-primary text-md text-start flex items-center" 
+                            preventScrollReset 
+                            onClick={() => navigate(-1)}>
+                            <IoIosArrowBack /> Back to results
+                        </button>
                     </div>
 
                     <div className="flex flex-col lg:flex-row gap-8">

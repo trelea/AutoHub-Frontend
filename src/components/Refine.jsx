@@ -22,11 +22,11 @@ export const Refine = () => {
                 </button>
             </div>
 
-            <div className="hidden lg:flex lg:flex-col w-full border border-gray-300 h-fit bg-white rounded-md">
-                <div className="p-4">
+            <div className="hidden lg:flex lg:flex-col w-full h-fit gap-1">
+                <div className="p-4 bg-white rounded-md border border-gray-300">
                     <h1 className="text-2xl font-semibold">Refine by</h1>
                 </div>
-                <div>
+                <div className="flex flex-col gap-1">
                     <Filters />
                 </div>
             </div>

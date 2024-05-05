@@ -14,7 +14,6 @@ export const MakeModelLabel = ({ id, c_make, c_model }) => {
     return (
         <div className="flex flex-col gap-4 md:flex-row">
             <select className="select select-bordered w-full" onChange={e => setMake({ carId: id,  make: e.target.value })}>
-                { console.log(c_make) }
                 <option 
                     disabled={(c_make.length === 0) ? true : false} 
                     selected={(c_make.length === 0) ? true : false}

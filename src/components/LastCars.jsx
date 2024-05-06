@@ -19,7 +19,7 @@ export const LastCars = () => {
             <div className='flex flex-col gap-8 px-4 py-8 xl:w-[1280px] relative'>
                 <h1 className="text-center text-primary font-bold text-3xl">Last 10 Cars</h1>
 
-                <div className="flex overflow-x-hidden" ref={scrollDiv}>
+                <div className="flex overflow-scroll lg:overflow-x-hidden" ref={scrollDiv}>
 
                     <div className="flex gap-4 pb-8">
                         {   
@@ -29,13 +29,13 @@ export const LastCars = () => {
                         } 
                     </div>
 
-                    <div className='absolute top-0 left-0 h-full flex justify-center items-center ml-4'>
+                    <div className='hidden absolute top-0 left-0 h-full lg:flex justify-center items-center ml-4'>
                         <button className='bg-gray-800 opacity-70 rounded-lg' onClick={() => scrollLeft()}>
                             <GrFormPrevious fontSize={'3rem'} color='white'/>
                         </button>
                     </div>
 
-                    <div className='absolute top-0 right-0 h-full flex justify-center items-center mr-4'>
+                    <div className='hidden absolute top-0 right-0 h-full lg:flex justify-center items-center mr-4'>
                         <button className='bg-gray-800 opacity-70 rounded-lg' onClick={() => scrollRight()}>
                             <MdNavigateNext fontSize={'3rem'} color='white'/>
                         </button>

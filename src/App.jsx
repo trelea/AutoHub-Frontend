@@ -7,9 +7,6 @@ import { Page404 } from "./pages/Page404"
 
 
 export const App = () => {
-
-	// history.pushState({ path: window.location.toString() }, '', window.location.toString())
-
 	return (
 		<BrowserRouter>
 			<Routes>

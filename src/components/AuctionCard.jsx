@@ -1,18 +1,20 @@
-import { useState } from "react"
-import noThumb from '../assets/no-thumb.png'
+import { useEffect, useState } from "react"
 import { FaCamera } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import { MdNavigateNext } from "react-icons/md"
-
+import noThumb from '../assets/no-thumb.png'
 
 
 export const AuctionCard = ({ car }) => {
 
-    const [thumb] = useState(() => {
-        if (car?.lots[0]?.images?.normal) return car?.lots[0]?.images?.normal
-        if (car?.lots[0]?.images?.big) return car?.lots[0]?.images?.big
-        return noThumb
-    })
+    const [thumb, setThumb] = useState([])
+
+    useEffect(() => {
+        if (car?.lots[0]?.images?.normal) return setThumb(car?.lots[0]?.images?.normal)
+        if (car?.lots[0]?.images?.big) return setThumb(car?.lots[0]?.images?.big)
+        return setThumb(noThumb)
+    }, [car])
+    
 
     return (
         <div className="flex flex-col border border-gray-300 bg-white rounded-md shadow-2xl sm:w-full lg:w-[900px] md:flex-row md:justify-between h-full">

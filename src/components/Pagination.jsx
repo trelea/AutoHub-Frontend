@@ -7,32 +7,14 @@ export const Pagination = ({ queries, setQueries }) => {
         <div className="flex flex-row-reverse items-center justify-between lg:flex-col lg:gap-4 lg:items-start w-full">
 
             <div className="flex justify-end w-full">
-                <select className="select select-bordered select-sm select-primary">
+                <select className="select select-bordered select-sm select-primary" onChange={e => setQueries({
+                    page: parseInt(queries.get('page')),
+                    limit: e.target.value
+                })}>
                     <option disabled selected hidden>{queries.get('limit')} posts</option>
-                    <option value={20}
-                        onClick={() => {
-                            setQueries({
-                                page: parseInt(queries.get('page')),
-                                limit: 20
-                            })
-                        }}
-                        >20  posts</option>
-                    <option value={50}
-                        onClick={() => {
-                            setQueries({
-                                page: parseInt(queries.get('page')),
-                                limit: 50
-                            })
-                        }}
-                        >50  posts</option>
-                    <option value={100}
-                        onClick={() => {
-                            setQueries({
-                                page: parseInt(queries.get('page')),
-                                limit: 100
-                            })
-                        }}
-                        >100 posts</option>
+                    <option value={20}>20  posts</option>
+                    <option value={50}>50  posts</option>
+                    <option value={100}>100 posts</option>
                 </select>
             </div>
 

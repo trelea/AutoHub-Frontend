@@ -1,5 +1,6 @@
 import logo from '../assets/logo.png'
 import { RegistrationForm } from '../components/RegistrationForm'
+import { Link } from 'react-router-dom'
 
 
 export const Register = () => {
@@ -16,9 +17,22 @@ export const Register = () => {
                     <p className='mt-4 text-lg'>Create an account and start bidding today on our large selection of cars. We offer an extensive logistic network and personal support in your own language.</p>
                     <RegistrationForm />
                 </div>
+                <div className='flex items-center justify-center p-6'>
+                    <div className='flex gap-6 items-center'>
+                        <p className='text-sm font-medium md:text-md'>Already registered?</p>
+                        <button type="button" className='btn btn-outline btn-primary'>Login</button> 
+                    </div>
+                    
+                </div>
             </div>
-            <div>
 
+            <div className='border-t border-gray-300 w-full flex flex-col items-center gap-4 pt-4'>
+                <p className='text-sm'>© 2024 AutoHub. All rights reserved.</p>
+                <div className='flex gap-4 text-sm'>
+                    <Link to={''} className='link hover:link-primary'>Terms and conditions</Link>
+                    <Link to={''} className='link hover:link-primary'>Privacy Notice</Link>
+                    <Link to={''} className='link hover:link-primary'>Help</Link>
+                </div>
             </div>
         </div> 
     )

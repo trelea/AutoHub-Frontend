@@ -87,7 +87,7 @@ export const Navbar = () => {
 
                             <Link to={'/auctions?page=1&limit=20'} reloadDocument>
                                 <li 
-                                    className={`text-md font-semibold px-4 pb-1 ${(window.location.pathname === '/auctions') ? 
+                                    className={`text-md font-semibold px-4 pb-1 ${((window.location.pathname === '/auctions') || (window.location.pathname === '/car/info')) ? 
                                         'border-b-4 border-primary' : 
                                         'hover:border-b-4 hover:pb-1 hover:border-primary' }`}>Auctions</li>
                             </Link>

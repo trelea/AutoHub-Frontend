@@ -32,7 +32,11 @@ export const LoginModal = ({ setLogin }) => {
                         </div>
                         <div className='flex py-4 gap-1'>
                             <p>No account yet?</p>
-                            <Link to={'/'} className='link link-primary'> Register</Link>
+                            <Link 
+                                to={'/register'} 
+                                className='link link-primary'
+                                reloadDocument
+                                preventScrollReset> Register</Link>
                         </div>
                     </div>
                 </div>    

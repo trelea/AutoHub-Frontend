@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import logo from "../assets/logo.png"
 
 export const DownFoot = () => {
@@ -5,9 +6,12 @@ export const DownFoot = () => {
         <div className="flex justify-center">
             <footer className="footer items-center p-4 text-white w-[1280px] flex justify-between">
                 <aside className="items-center grid-flow-col">
-                    <a href="">
+                    <Link 
+                        to={'/'}
+                        reloadDocument
+                        preventScrollReset>
                         <img src={logo} alt="" className="h-16 bg-white rounded-2xl shadow-2xl"/>
-                    </a>
+                    </Link>
                     <p>Copyright © 2024 - All right reserved</p>
                 </aside> 
                 <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">

@@ -12,6 +12,8 @@ export const Navbar = () => {
     const [panel, setPanel] = useState(false)
     const [login, setLogin] = useState(false)
 
+    console.log(window.location.pathname)
+
     const previewPanel = () => {
         setPanel(!panel)
         if (!panel) document.body.classList.add('overflow-hidden')
@@ -20,7 +22,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <div className="navbar bg-base-100 flex justify-center pb-0 border-b">
+            <div className="navbar bg-base-100 flex justify-center pb-0 border-b border-gray-300">
                 <div className="flex flex-col w-[1280px] md:px-2">
                     
                     <div className="flex w-full justify-between items-center" >
@@ -70,19 +72,31 @@ export const Navbar = () => {
                     <div className="hidden md:flex md:w-full md:justify-start mt-2">
                         <ul className="flex">
                             <Link to={'/'} reloadDocument>
-                                <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Home</li>
+                                <li 
+                                    className={`text-md font-semibold px-4 pb-1 ${(window.location.pathname === '/') ? 
+                                        'border-b-4 border-primary' : 
+                                        'hover:border-b-4 hover:pb-1 hover:border-primary' }`}>Home</li>
                             </Link>
                             
                             <Link to={'/findcar/advanced'} reloadDocument>
-                                <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Find Cars</li>
+                                <li 
+                                    className={`text-md font-semibold px-4 pb-1 ${(window.location.pathname === '/findcar/advanced') ? 
+                                        'border-b-4 border-primary' : 
+                                        'hover:border-b-4 hover:pb-1 hover:border-primary' }`}>Find Cars</li>
                             </Link>
 
                             <Link to={'/auctions?page=1&limit=20'} reloadDocument>
-                                <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Auctions</li>
+                                <li 
+                                    className={`text-md font-semibold px-4 pb-1 ${(window.location.pathname === '/auctions') ? 
+                                        'border-b-4 border-primary' : 
+                                        'hover:border-b-4 hover:pb-1 hover:border-primary' }`}>Auctions</li>
                             </Link>
 
                             <Link to={'/'} reloadDocument>
-                                <li className="text-md font-semibold px-4 pb-2 hover:pb-1 hover:border-b-4 hover:border-primary">Sell</li>
+                                <li 
+                                    className={`text-md font-semibold px-4 pb-1 ${(window.location.pathname === '') ? 
+                                        'border-b-4 border-primary' : 
+                                        'hover:border-b-4 hover:pb-1 hover:border-primary' }`}>Sell</li>
                             </Link>
                             
                         </ul>

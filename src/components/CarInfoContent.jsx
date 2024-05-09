@@ -5,11 +5,15 @@ import { CarSpecifications } from "./CarSpecifications"
 import { LastCars } from "./LastCars"
 import { CarEquipment } from "./CarEquipment"
 import { CarDamage } from "./CarDamage"
+import { useState } from "react"
+import { LoginModal } from "./LoginModal"
+
 
 
 
 export const CarInfoContent = ({ car }) => {
     const navigate = useNavigate()
+    const [login, setLogin] = useState(false)
     return (
         <>
             <div className="flex justify-center items-center bg-slate-100">
@@ -53,7 +57,16 @@ export const CarInfoContent = ({ car }) => {
                                 </div>
                                 <div className="p-4 border-t border-gray-300">
                                     <h1 className="text-lg font-semibold">
-                                        <span className="underline text-primary"><Link to={'.'}>Register</Link></span> or <span className="underline text-primary">Login</span> to place a bid and to see all vehicle information.
+                                        <span className="underline text-primary">
+                                            <Link 
+                                                to={'/register'}
+                                                className="w-full"
+                                                reloadDocument
+                                                preventScrollReset>Register</Link>
+                                        </span> or 
+                                        <span 
+                                            className="underline text-primary ml-1"
+                                            onClick={() => setLogin(true)}>Login</span> to place a bid and to see all vehicle information.
                                     </h1>
                                 </div>
                             </div>
@@ -63,6 +76,7 @@ export const CarInfoContent = ({ car }) => {
                 </div>
             </div>
             <LastCars />
+            { login && <LoginModal setLogin={setLogin}/>}
         </>
         
     )

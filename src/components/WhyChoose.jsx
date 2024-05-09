@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export const WhyChoose = () => {
     const [card, setCard] = useState(1)
@@ -36,7 +37,11 @@ export const WhyChoose = () => {
                         <a href="">Learn More</a>
                     </button>
                     <button className="btn btn-primary rounded-full flex-1">
-                        <a href="">Register Now</a>
+                        <Link
+                            to={'/register'}
+                            reloadDocument
+                            preventScrollReset
+                            className="w-full">Register Now</Link>
                     </button>
                 </div>
 
